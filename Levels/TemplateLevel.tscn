@@ -5,12 +5,16 @@
 
 [node name="TemplateLevel" type="Node2D"]
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="Navigation2D" type="Navigation2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="Navigation2D"]
 tile_set = ExtResource( 1 )
 collision_layer = 2
 collision_mask = 5
 format = 1
 tile_data = PoolIntArray( -131074, 1, 0, -131073, 1, 2, -196608, 1, 2, -196607, 1, 2, -196606, 1, 2, -196605, 1, 1, -65538, 1, 65538, -65537, 2, 0, -131072, 2, 0, -131071, 2, 0, -131070, 2, 0, -131069, 1, 65538, -2, 1, 65538, -1, 2, 0, -65536, 2, 4, -65535, 2, 2, -65534, 2, 0, -65533, 1, 65538, 65534, 1, 65538, 65535, 2, 0, 0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 1, 65538, 131070, 1, 65536, 131071, 1, 2, 65536, 1, 2, 65537, 1, 2, 65538, 1, 2, 65539, 1, 65537 )
+
+[node name="Destinations" type="Node" parent="Navigation2D"]
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 66.0424, -30.684 )
