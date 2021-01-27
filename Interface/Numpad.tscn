@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://GFX/Interface/Fonts/kenvector_future.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://GFX/Interface/PNG/metalPanel.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://GFX/Interface/PNG/metalPanel_blueCorner.png" type="Texture" id=9]
 [ext_resource path="res://GFX/Interface/PNG/metalPanel_yellow.png" type="Texture" id=10]
 [ext_resource path="res://GFX/Interface/PNG/metalPanel_redCorner.png" type="Texture" id=11]
+[ext_resource path="res://Interface/Numpad.gd" type="Script" id=12]
 
 [sub_resource type="DynamicFont" id=3]
 size = 18
@@ -47,11 +48,11 @@ texture = ExtResource( 9 )
 region_rect = Rect2( 0, 0, 100, 100 )
 
 [node name="Numpad" type="Popup"]
-visible = true
 margin_right = 300.0
 margin_bottom = 400.0
 rect_min_size = Vector2( 300, 400 )
 theme = SubResource( 2 )
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -96,13 +97,15 @@ patch_margin_top = 4
 patch_margin_right = 4
 patch_margin_bottom = 4
 
-[node name="Label" type="Label" parent="VBoxContainer/DisplayContainer"]
+[node name="Display" type="Label" parent="VBoxContainer/DisplayContainer"]
 margin_left = 100.0
 margin_top = 36.0
 margin_right = 180.0
 margin_bottom = 63.0
+size_flags_horizontal = 3
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Test"
+align = 1
 
 [node name="ButtonContainer" type="CenterContainer" parent="VBoxContainer"]
 margin_top = 150.0
@@ -207,4 +210,10 @@ rect_min_size = Vector2( 40, 40 )
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
-text = "ok"
+text = "OK"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -10.0
+
+[node name="Timer" type="Timer" parent="."]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
