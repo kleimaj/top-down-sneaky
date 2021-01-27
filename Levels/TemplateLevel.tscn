@@ -258,3 +258,5 @@ position = Vector2( 66.0424, -30.684 )
 [node name="Guards" type="Node" parent="."]
 
 [node name="Doors" type="Node" parent="."]
+
+[node name="LockedDoors" type="Node" parent="."]
