@@ -44,6 +44,7 @@ func update_display():
 		check_guess()
 
 func reset_lock():
+	status.texture = load("res://GFX/Interface/PNG/dotRed.png")
 	display.text = ""
 	guess.clear()
 
