@@ -328,7 +328,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 256, 576, 384 )
+0/region = Rect2( 0, 256, 64, 64 )
 0/tile_mode = 0
 0/occluder_offset = Vector2( 864, 640 )
 0/navigation_offset = Vector2( 864, 640 )
@@ -337,7 +337,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 0/shape_one_way = false
 0/shape_one_way_margin = 0.0
 0/shapes = [  ]
-0/z_index = 0
+0/z_index = 2
 1/name = "Walls"
 1/texture = ExtResource( 1 )
 1/tex_offset = Vector2( 0, 0 )
@@ -673,7 +673,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 "shape": SubResource( 99 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
-1/z_index = 0
+1/z_index = 2
 2/name = "Floor1"
 2/texture = ExtResource( 1 )
 2/tex_offset = Vector2( 0, 0 )
