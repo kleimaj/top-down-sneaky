@@ -1,6 +1,6 @@
 extends Popup
 
-var combination = [0, 4, 5, 1]
+var combination = []
 var guess = []
 
 onready var display = $VBoxContainer/DisplayContainer/Display
@@ -50,3 +50,4 @@ func reset_lock():
 
 func _on_Timer_timeout():
 	emit_signal("combination_correct")	
+	reset_lock()

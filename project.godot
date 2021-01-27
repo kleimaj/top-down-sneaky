@@ -19,6 +19,10 @@ config/name="TopDownSneaky"
 run/main_scene="res://Levels/Level1.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+CombinationGenerator="*res://Doors/combination_generator.gd"
+
 [input]
 
 move_up={
