@@ -86,7 +86,7 @@ position = Vector2( 480.91, 479.833 )
 rotation = 1.5708
 
 [node name="LockedDoor" parent="LockedDoors" index="0" instance=ExtResource( 5 )]
-position = Vector2( 1054.59, 351.962 )
+position = Vector2( 224.587, -32.038 )
 rotation = 1.5708
 
 [node name="Computer" parent="Computers" index="0" instance=ExtResource( 6 )]

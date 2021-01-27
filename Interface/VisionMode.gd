@@ -19,6 +19,8 @@ func DARK_mode():
 	color = DARK
 	$AudioStreamPlayer.stream = load("res://SFX/nightvision_off.wav")
 	$AudioStreamPlayer.play()
+	get_tree().call_group("Labels", "hide")
+	get_tree().call_group("Lights", "show")
 	enabled = false
 	$Timer.start()
 
@@ -26,6 +28,8 @@ func NIGHT_VISION_mode():
 	color = NIGHT_VISION
 	$AudioStreamPlayer.stream = load("res://SFX/nightvision.wav")
 	$AudioStreamPlayer.play()
+	get_tree().call_group("Labels", "show")
+	get_tree().call_group("Lights", "hide")
 	enabled = false
 	$Timer.start()
 
