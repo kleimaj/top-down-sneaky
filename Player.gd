@@ -78,6 +78,11 @@ func disguise():
 	collision_layer = 16
 	$Timer.start()
 
+func collect_briefcase():
+	var loot = Node.new()
+	loot.set_name("Briefcase")
+	add_child(loot)
+
 
 func _on_Timer_timeout():
 	reveal()
