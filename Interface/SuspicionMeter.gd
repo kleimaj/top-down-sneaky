@@ -11,7 +11,7 @@ func _process(delta):
 func player_seen():
 	value += step * suspicion_multiplier
 	if value == max_value:
-		end_game()
+		get_tree().change_scene("res://Levels/Failed.tscn")
 
 func end_game():
 	get_tree().quit()

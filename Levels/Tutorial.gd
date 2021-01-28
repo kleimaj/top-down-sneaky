@@ -10,6 +10,7 @@ func update_pointer_position(objective_number):
 	$Tween.interpolate_property(pointer, "position", pointer.position, place.position, 0.5, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 	$Tween.start()
 	$MessageSound.play()
+	$TutorialGUI/AnimationPlayer.play("MessageChange")
 	$TutorialGUI/Control/NinePatchRect/Label.text = message.message
 
 func _on_MoveObjective_body_entered(body):
@@ -21,6 +22,7 @@ func _on_DoorObjective_body_entered(body):
 
 
 func _on_NightVisionObjective_body_entered(body):
+	get_tree().call_group("Interface", "DARK_mode")
 	update_pointer_position(3)
 
 

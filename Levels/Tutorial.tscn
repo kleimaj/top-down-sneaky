@@ -71,6 +71,7 @@ texture = ExtResource( 3 )
 offset = Vector2( 300, 0 )
 energy = 0.5
 shadow_enabled = true
+shadow_item_cull_mask = 0
 
 [node name="ObjectiveAreas" type="Node" parent="." index="16"]
 
@@ -117,7 +118,7 @@ shape = SubResource( 1 )
 [node name="ObjectiveMessages" type="Node" parent="." index="17"]
 
 [node name="WelcomeMessage" parent="ObjectiveMessages" index="0" instance=ExtResource( 9 )]
-message = "Welcome to the Tutorial! Move with [W] [A] [S] [D]"
+message = "Welcome to the Tutorial! Move with W A S D"
 
 [node name="DoorMessage" parent="ObjectiveMessages" index="1" instance=ExtResource( 9 )]
 message = "Stand close to the door, and click on the door to open it!"
