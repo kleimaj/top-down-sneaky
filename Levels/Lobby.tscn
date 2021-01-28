@@ -72,12 +72,12 @@ autowrap = true
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/Background/VBoxContainer"]
 margin_top = 190.0
 margin_right = 376.0
-margin_bottom = 276.0
+margin_bottom = 330.0
 
 [node name="GridContainer" type="GridContainer" parent="CenterContainer/Background/VBoxContainer/CenterContainer"]
 margin_left = 118.0
 margin_right = 258.0
-margin_bottom = 86.0
+margin_bottom = 140.0
 custom_constants/vseparation = 22
 
 [node name="StartButton" type="Button" parent="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer"]
@@ -88,12 +88,22 @@ custom_fonts/font = SubResource( 2 )
 custom_constants/hseparation = 0
 text = "Start Mission"
 
-[node name="QuitButton" type="Button" parent="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer"]
+[node name="TutorialButton" type="Button" parent="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer"]
 margin_top = 54.0
 margin_right = 140.0
 margin_bottom = 86.0
+rect_min_size = Vector2( 140, 32 )
+custom_fonts/font = SubResource( 2 )
+custom_constants/hseparation = 0
+text = "Tutorial"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer"]
+margin_top = 108.0
+margin_right = 140.0
+margin_bottom = 140.0
 rect_min_size = Vector2( 32, 32 )
 custom_fonts/font = SubResource( 3 )
 text = "Quit Game"
 [connection signal="pressed" from="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer/TutorialButton" to="." method="_on_TutorialButton_pressed"]
 [connection signal="pressed" from="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer/QuitButton" to="." method="_on_QuitButton_pressed"]

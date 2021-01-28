@@ -17,7 +17,4 @@ text = "You Won!"
 
 [node name="CenterContainer" parent="CenterContainer/Background/VBoxContainer" index="2"]
 margin_top = 133.0
-margin_bottom = 219.0
-
-[node name="StartButton" parent="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer" index="0"]
-text = "Play Again"
+margin_bottom = 273.0
