@@ -82,6 +82,7 @@ func collect_briefcase():
 	var loot = Node.new()
 	loot.set_name("Briefcase")
 	add_child(loot)
+	get_tree().call_group("Loot", "collect_loot")
 
 
 func _on_Timer_timeout():
