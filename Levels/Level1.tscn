@@ -96,4 +96,10 @@ lock_group = "1"
 
 [node name="Briefcase" parent="Loot" index="0" instance=ExtResource( 7 )]
 position = Vector2( 1244.07, -632.714 )
+
+[node name="Exit" parent="." index="10"]
+margin_left = 258.959
+margin_top = -702.126
+margin_right = 458.959
+margin_bottom = -602.126
 [connection signal="combination" from="Computers/Computer" to="LockedDoors/LockedDoor" method="_on_Computer_combination"]
